@@ -3,6 +3,8 @@ import java.util.Hashtable;
 
 public class Main {
 
+    // BigInteger class stores arbitrarily large numbers
+    // For memoization
     Hashtable<Long, Long> fibonacciDictionary = new Hashtable<>();
     Hashtable<Long, BigInteger> factorialDictionary = new Hashtable<>();
 
@@ -11,8 +13,10 @@ public class Main {
     }
 
     public Main() {
-        System.out.println(factorial(100));
-        System.out.println(factorialDictionary);
+        long n = 100;
+
+        System.out.println(fibonacci(n));
+        System.out.println(factorial(n));
     }
 
     public long fibonacci(long n){
@@ -38,5 +42,4 @@ public class Main {
             return x;
         }
     }
-
 }
